@@ -1,0 +1,57 @@
+body {
+  height: 100%;
+}
+.ui-layout-pane {
+    padding: 0;
+}
+
+ul.users {
+    & > li {
+        cursor: pointer;
+        padding: 10px;
+        list-style-type: none;
+        border-bottom: 1px solid #aaa;
+        position: relative;
+        &  > img {
+            vertical-align: middle;
+            margin-right: 20px;
+        }
+    }
+}
+
+.detail {
+    .img-wrapper {
+        float: left;
+        margin-left: 30px;
+        text-align: left;
+        img {
+            border-radius: 20px 20px 20px 20px;
+            box-shadow: 2px 2px 3px #666;
+        }
+    }
+    .fields {
+        margin-top: 20px;
+        ul {
+            float: left;
+            margin-left: 30px;
+            margin-top: 10px;
+            li {
+                list-style-type: none;
+                padding: 5px 0;
+                label {
+                    width: 125px
+                }
+                input[type=text] {
+                  width: 250px;
+                }
+                button img {
+                  vertical-align: text-bottom;
+                }
+            }
+            &.selected {
+                background-color: #444444;
+                color: #FFFFFF;
+            }
+        }
+    }
+}
