@@ -5,8 +5,8 @@ _.templateSettings = { // change underscore templates to use {{val}}
 (function () {
 
     var Models = {},
-    Views = {},
-    Collections = {};
+        Views = {},
+        Collections = {};
 
     Models.User = Backbone.Model.extend({
         defaults: {},
