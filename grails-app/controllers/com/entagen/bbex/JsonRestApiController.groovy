@@ -3,6 +3,9 @@ package com.entagen.bbex
 import grails.converters.JSON
 import org.springframework.web.servlet.support.RequestContextUtils
 
+/**
+ * adapted from json-rest-api plugin
+ */
 class JsonRestApiController {
 
     def list = {
@@ -34,13 +37,10 @@ class JsonRestApiController {
         def result = [ success: true ]
         def status = 200
         def entity = grailsApplication.getClassForName(params.entity)
-        println 'hi'
         if (entity) {
-            println entity
             def obj = entity.newInstance()
             obj.properties = request.JSON.data
             obj.validate()
-            println obj
             if (obj.hasErrors()) {
                 status = 500
                 result.message = extractErrors(obj).join(";")
